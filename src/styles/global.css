@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f1f5f9;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 32px;
+  background: #1e293b;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  margin: 0;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  color: #f97316;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 8px 18px;
+  border: 2px solid #475569;
+  border-radius: 4px;
+  background: transparent;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  border-color: #f97316;
+  background: #f97316;
+  color: #fff;
+}
+
+.content {
+  max-width: 800px;
+  margin: 48px auto;
+  padding: 0 24px;
+}
+
+.page {
+  padding: 36px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 8%);
+}
+
+.page h2 {
+  display: inline-block;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #f97316;
+  color: #0f172a;
+}
+
+.page p {
+  margin-bottom: 16px;
+}
+
+.page li {
+  margin-bottom: 12px;
+}
+
+.extra-text {
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.careers-page {
+  max-width: 900px;
+  border-top: 5px solid #0f766e;
+}
+
+.careers-intro {
+  max-width: 680px;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin-bottom: 8px !important;
+  color: #0f766e;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.careers-intro h2 {
+  margin-bottom: 14px;
+  border-bottom-color: #0f766e;
+}
+
+.careers-intro p:last-child {
+  margin-bottom: 0;
+  color: #475569;
+}
+
+.careers-form fieldset {
+  margin: 0 0 24px;
+  padding: 24px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.careers-form legend {
+  padding: 0 8px;
+  color: #0f172a;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+
+.form-field:last-child {
+  margin-bottom: 0;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  color: #1e293b;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.form-field label span,
+.required-note span {
+  color: #b91c1c;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  background: #fff;
+  color: #1e293b;
+  font: inherit;
+}
+
+.form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-field input[type='file'] {
+  padding: 8px;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 3px solid rgb(15 118 110 / 25%);
+  outline-offset: 1px;
+  border-color: #0f766e;
+}
+
+.form-field input:invalid:not(:placeholder-shown),
+.form-field select:invalid,
+.form-field textarea:invalid:not(:placeholder-shown) {
+  border-color: #b91c1c;
+}
+
+.form-field small,
+.required-note {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.required-note {
+  margin: 0 0 16px;
+}
+
+.submit-button {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 2px solid #0f766e;
+  border-radius: 4px;
+  background: #0f766e;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.submit-button:hover {
+  border-color: #115e59;
+  background: #115e59;
+}
+
+.submit-button:focus-visible,
+.nav-btn:focus-visible {
+  outline: 3px solid #fbbf24;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px 20px;
+  }
+
+  .content {
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+
+  .page {
+    padding: 24px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-field-full {
+    grid-column: auto;
+  }
+
+  .careers-form fieldset {
+    padding: 20px 16px;
+  }
+}

@@ -1,0 +1,148 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f1f5f9; /* Fondo gris muy claro */
+  color: #334155; 
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b; /* Azul grisáceo oscuro corporativo */
+  padding: 16px 32px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: #f97316; /* Naranja logístico */
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Botones de navegación */
+.nav-btn {
+  background-color: transparent;
+  color: #cbd5e1;
+  border: 2px solid #475569;
+  border-radius: 4px; /* Bordes un poco más rectos para dar seriedad */
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: #334155;
+  color: #ffffff;
+}
+
+/* Estado activo: Naranja llamativo típico de envíos */
+.nav-btn.active {
+  background-color: #f97316; 
+  color: #ffffff;
+  border-color: #f97316;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.4);
+}
+
+
+.content {
+  max-width: 800px;
+  margin: 48px auto;
+  padding: 0 24px;
+}
+
+.page {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 36px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: slideIn 0.4s ease;
+}
+
+.page h2 {
+  margin-bottom: 20px;
+  color: #0f172a;
+  border-bottom: 3px solid #f97316; /* Línea naranja decorativa */
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.page p {
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+ul {
+  margin-left: 24px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+.extra-text {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animación de entrada estilo deslizamiento */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.services-banner {
+  width: 100%; /* Ocupa todo el ancho disponible del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 8px;
+  margin-top: 32px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra elegante */
+  display: block; /* Evita espacios en blanco debajo de la imagen */
+}
