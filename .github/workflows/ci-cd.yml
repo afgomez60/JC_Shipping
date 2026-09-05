@@ -17,6 +17,7 @@ concurrency:
 
 jobs:
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -52,7 +53,7 @@ jobs:
 
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: [build, test]
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
